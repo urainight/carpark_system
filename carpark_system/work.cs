@@ -500,7 +500,7 @@ namespace carpark_system
                     frame = new Image<Bgr, byte>(src.ToImage<Bgr, byte>().Data);
                     using (Image<Gray, byte> grayframe = new Image<Gray, byte>(src.ToImage<Gray, byte>().Data))
                     {
-                        var faces = cascade.DetectMultiScale(grayframe, 1.1, 6, new Size(10, 10), new Size(500, 500));
+                        var faces = cascade.DetectMultiScale(grayframe, 1.1, 15, new Size(10, 10), new Size(500, 500));
 
                         foreach (var face in faces)
                         {
